@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* nav bar */
+nav{
+    background-color: rgb(145, 5, 145);
+    color: white;
+    height: 60px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+/* the game page */
+.gameContainer{
+    /* background-color: beige; */
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* box container */
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* boxes */
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(241, 230, 251);
+}
+
+/* info about whose turn */
+.info{
+    font-size: 25px;
+}
+
+/* info */
+.gameInfo{
+    padding: 0 34px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+
+/* gif */
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out ;
+}
+
+/* to erase some of the sides of box */
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+/* reset button */
+#reset{
+    margin: 0 23px;
+    padding: 6px 14px;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+/* line that comes after winning */
+.line{
+    background-color: black;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background-color: #790679;
+    transition: width 1s ease-in-out;
+}
+
+/* media queries */
+@media screen and (max-width: 950px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+    
+}
